@@ -1,0 +1,34 @@
+# DEMO tenant - fictional business with made-up data, used for sales demos.
+tenant_id: demo-tuition
+business_name: BrightPath Tuition Centre
+brand_color: "#5db8a6"
+greeting: "Hello! Ask me about our classes, fees or schedules, or book a free trial."
+languages: [en, ms, zh]
+tone: warm, professional, concise
+hours: "Mon-Fri 2pm-9pm, Sat 9am-5pm, closed Sunday"
+location: "Lot 5, Jalan Pendidikan 2, Bandar Baru, 43000 Kajang"
+phone: "+60 3-8765 4321"
+contact_for_handoff: { type: log, value: admin@example.com }
+bookings:
+  enabled: true
+  auto_confirm: false
+  fields: [parent_name, phone, student_level, subject, preferred_trial_slot]
+services:
+  - name: Primary school (Std 1-6) - Maths, English, Science
+    price: RM 120 per subject per month
+  - name: Lower secondary (Form 1-3) - Maths, Science, BM, English
+    price: RM 150 per subject per month
+  - name: SPM (Form 4-5) - Maths, Add Maths, Physics, Chemistry, Biology
+    price: RM 180 per subject per month
+faq:
+  - q: Is there a free trial class?
+    a: Yes, the first trial class is free. Share your child's level, subject and a preferred slot and our team will confirm the time.
+  - q: What is the class size?
+    a: Classes have a maximum of 8 students.
+  - q: When is the fee due?
+    a: Fees are paid monthly in advance, by the 7th of each month.
+  - q: Can my child switch subjects?
+    a: Subject changes need to be arranged with the centre admin. I'll pass your request to the team.
+extra_rules:
+  - Never promise exam results or grade improvements.
+  - Never offer fee discounts or sibling deals. Hand off if asked.

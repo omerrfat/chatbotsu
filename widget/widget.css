@@ -1,0 +1,29 @@
+.cbw-root { --cbw-color: #cc785c; position: fixed; right: 20px; bottom: 20px; z-index: 2147483000;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 15px; line-height: 1.45; }
+.cbw-root * { box-sizing: border-box; }
+.cbw-fab { width: 58px; height: 58px; border-radius: 50%; border: 0; background: var(--cbw-color); color: #fff;
+  cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(20,20,19,.25);
+  transition: transform .15s ease; }
+.cbw-fab:hover { transform: scale(1.06); }
+.cbw-fab[hidden], .cbw-panel[hidden] { display: none; }
+.cbw-panel { width: 360px; max-width: calc(100vw - 24px); height: 520px; max-height: calc(100vh - 40px); background: #faf9f5;
+  border: 1px solid #e6dfd8; border-radius: 16px; box-shadow: 0 12px 40px rgba(20,20,19,.25);
+  display: flex; flex-direction: column; overflow: hidden; }
+.cbw-head { background: var(--cbw-color); color: #fff; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+.cbw-close { background: none; border: 0; color: #fff; font-size: 26px; line-height: 1; cursor: pointer; padding: 0 4px; }
+.cbw-log { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 8px; }
+.cbw-msg { max-width: 85%; padding: 9px 13px; border-radius: 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.cbw-bot { background: #efe9de; color: #141413; align-self: flex-start; border-bottom-left-radius: 4px; }
+.cbw-user { background: var(--cbw-color); color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
+.cbw-typing { opacity: .6; }
+.cbw-form { display: flex; gap: 8px; padding: 10px; border-top: 1px solid #e6dfd8; }
+.cbw-input { flex: 1; min-width: 0; padding: 10px 12px; border: 1px solid #e6dfd8; border-radius: 10px; font: inherit; background: #fff; color: #141413; }
+.cbw-input:focus { outline: 2px solid var(--cbw-color); outline-offset: 1px; }
+.cbw-send { border: 0; border-radius: 10px; padding: 0 16px; background: var(--cbw-color); color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+.cbw-send:disabled { opacity: .5; cursor: default; }
+.cbw-foot { font-size: 11px; color: #6c6a64; text-align: center; padding: 0 10px 8px; }
+@media (max-width: 480px) {
+  .cbw-root { right: 12px; bottom: 12px; }
+  .cbw-panel { width: calc(100vw - 24px); height: calc(100vh - 24px); }
+  .cbw-input { font-size: 16px; } /* prevents iOS zoom on focus */
+}

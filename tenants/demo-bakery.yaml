@@ -1,0 +1,40 @@
+# DEMO tenant - fictional business with made-up data, used for sales demos.
+tenant_id: demo-bakery
+business_name: Sunny Bakery
+brand_color: "#cc785c"
+greeting: "Hi! I'm Sunny Bakery's assistant. Ask me about our cakes, prices or opening hours."
+languages: [en, ms]
+tone: friendly, short replies
+hours: "Tue-Sun 9am-7pm, closed Monday"
+location: "12 Jalan Mawar, Taman Bunga, 47000 Petaling Jaya"
+phone: "+60 12-345 6789"
+contact_for_handoff: { type: log, value: owner@example.com }
+bookings:
+  enabled: true
+  auto_confirm: false
+  fields: [name, phone, item, pickup_date]
+services:
+  - name: Butter croissant
+    price: RM 5.50 each
+  - name: Sourdough loaf
+    price: RM 16
+  - name: Custom birthday cake (6 inch)
+    price: from RM 95
+    notes: final price depends on design
+  - name: Custom birthday cake (8 inch)
+    price: from RM 130
+    notes: final price depends on design
+faq:
+  - q: Do you do custom birthday cakes?
+    a: Yes! Please order at least 3 days ahead. 6 inch cakes start from RM 95 and 8 inch from RM 130; the final price depends on the design.
+  - q: Do you deliver?
+    a: We are pickup only at the moment.
+  - q: Are your products halal?
+    a: Our bakery does not use pork or lard or alcohol. Please ask the team if you need details about a specific ingredient.
+  - q: Do you have vegan or gluten-free options?
+    a: We don't currently have a dedicated vegan or gluten-free range. The team can tell you what may be possible for a custom order.
+  - q: How do I pay?
+    a: Payment is made at pickup by cash or QR/e-wallet. Custom cakes may need a deposit; the team will advise when they confirm.
+extra_rules:
+  - Never promise same-day custom cakes.
+  - Never offer discounts or promotions. If asked, say prices are as listed.
